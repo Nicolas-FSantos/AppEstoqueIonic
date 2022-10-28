@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" class="ion-text-center">
+  <ion-toolbar color="toolbarcolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="fitness-outline"></ion-icon>
+      Estoque de Materiais Médicos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="backcolor" padding>
+
+<p></p>
+
+    <ion-img style="width: 30%; height: 30%; margin: auto;"  src="/assets/maleta.png" ></ion-img>
+
+    <br>
+    <ion-list color="backcolor">
+      <ion-card *ngFor="let i of prod.produtos" color="product2" class="ion-text-center">
+
+          <h4>{{i.nome}}</h4>
+          <p>Lote: {{i.lote}}</p>
+          <p>Quantidade: {{i.quantidade}}</p>
+          <p>Data de Validade: {{i.dataValidade}}</p>
+
+      </ion-card>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-toolbar color="toolbarcolor">
+    Copyright © 2022 | App Estoque. Todos os direitos reservados.
+  </ion-toolbar>
+</ion-footer>
+
+
